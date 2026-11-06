@@ -45,13 +45,13 @@ python main.py
 
 | Item | Price |
 |---|---:|
-| Letter / Short and A4 paper | ₱2.00 per page |
-| Legal / Long paper | ₱3.00 per page |
-| Photo paper | ₱25.00 per page |
-| Black and white printing | +₱2.00 per page |
-| Colored printing | +₱3.00 per page |
-| Binding | ₱30.00 |
-| Lamination | ₱15.00 |
+| Letter / Short and A4 paper | ₱1.00 per page |
+| Legal / Long paper | ₱2.00 per page |
+| Photo paper | ₱15.00 per page |
+| Black and white printing | +₱1.00 per page |
+| Colored printing | +₱4.00 per page |
+| Binding | ₱20.00 |
+| Lamination | ₱10.00 |
 
 *Prices can be adjusted in the Change Prices tab based on the printing shop's actual rates.*
 
