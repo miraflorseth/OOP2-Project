@@ -30,7 +30,7 @@ class UserWindow(QMainWindow):
         self.init_ui()
         self.set_prices(*DEFAULT_PRICES)
  
-    # ---------- UI ----------
+    # UI
     def build_menu(self):
         file_menu = self.menuBar().addMenu("&File")
         act_clear = QAction("Clear Form", self)
@@ -84,7 +84,7 @@ class UserWindow(QMainWindow):
         form = QVBoxLayout()
         form.setSpacing(12)
  
-        # Row 1: customer details
+        # customer details
         self.txt_name = QLineEdit()
         self.txt_name.setPlaceholderText("e.g. Juan Dela Cruz")
         self.txt_phone = QLineEdit()
@@ -99,7 +99,7 @@ class UserWindow(QMainWindow):
         info.addLayout(self.labeled("Email / FB Account", self.txt_account), 1)
         form.addLayout(info)
  
-        # Row 2: file source buttons and add-ons
+        # file source buttons and add-ons
         source_box = QVBoxLayout()
         source_box.setSpacing(6)
         lbl_source = QLabel("File Submission Source")
@@ -143,7 +143,7 @@ class UserWindow(QMainWindow):
         row2.addLayout(addon_box, 1)
         form.addLayout(row2)
  
-        # Row 3: print specifications
+        # print specifications
         self.combo_color = QComboBox()
         for name, key in self.COLORS:
             self.combo_color.addItem(name, key)
@@ -214,7 +214,7 @@ class UserWindow(QMainWindow):
         panel.addWidget(self.status_table)
         return panel
  
-    # ---------- Logic ----------
+    # Logic 
     def calculate_total(self) -> float:
         p = self.prices
         size_key = self.combo_size.currentData()
@@ -305,7 +305,7 @@ class UserWindow(QMainWindow):
     def set_prices(self, paper, legal, photo, bw, color, binding, lamination):
         self.prices = {"paper": paper, "legal": legal, "photo": photo, "bw": bw,
                        "color": color, "binding": binding, "lamination": lamination}
-        # Only the display text changes; each item keeps its key in itemData.
+       
         self.combo_size.setItemText(0, f"Letter / Short — ₱{paper:.2f}/pg")
         self.combo_size.setItemText(1, f"A4 — ₱{paper:.2f}/pg")
         self.combo_size.setItemText(2, f"Legal / Long — ₱{legal:.2f}/pg")
