@@ -23,7 +23,7 @@ class AdminWindow(QMainWindow):
         self.build_menu()
         self.init_ui()
  
-    # ---------- UI ----------
+    # UI 
     def build_menu(self):
         file_menu = self.menuBar().addMenu("&File")
         act_export = QAction("Export Orders to CSV...", self)
@@ -46,7 +46,7 @@ class AdminWindow(QMainWindow):
         return card, lbl_value
  
     def init_ui(self):
-        # Main tab: summary cards on the left, orders table on the right
+        # Main tab
         main_page = QWidget()
         main_layout = QHBoxLayout(main_page)
         main_layout.setContentsMargins(12, 8, 12, 12)
@@ -107,7 +107,7 @@ class AdminWindow(QMainWindow):
         layout.addWidget(self.table)
         return section
  
-    # ---------- Orders ----------
+    # Orders 
     def load_existing(self, orders):
         self.orders = list(orders)
         self.refresh_table()
@@ -180,7 +180,7 @@ class AdminWindow(QMainWindow):
         except OSError:
             CustomAlertDialog("Export Failed", "The file could not be written.", self).exec()
  
-    # ---------- Change Prices ----------
+    # Change Prices 
     def build_price_page(self):
         page = QWidget()
         layout = QVBoxLayout(page)
